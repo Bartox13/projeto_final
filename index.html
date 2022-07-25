@@ -5,9 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inicio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Projeto final</h1> 
-    <p>oi oi</p>
+    <div id="maior">
+        <div id="div_imagem">
+            <img  height="100%" src="inicio.jpg" alt="inicio">
+        </div>
+        <div id="div_info">
+            <div >
+                <form id="form">
+                    <h3 class="frase">Digite seu Nick, invocador(a):</h3>
+                    <input id="nick_input" type="text" >
+                    <button class="nao_confirmado" id="confirmar">Confirmar</button>
+
+                </form>
+            </div>
+            <div id="div_escolha">
+                <h3 class="frase">Escolha qual wick:</h3>
+            <div id="escolha">
+                
+                <button onclick="sup()" id="suporte">Suporte</button>
+                <button onclick="adc()" id="adc">Adc</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="sccript.js"></script>
 </body>
 </html>
