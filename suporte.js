@@ -27,6 +27,7 @@ const nome_Q = document.querySelector("#nome_Q")
 const nome_W = document.querySelector("#nome_W")
 const nome_E = document.querySelector("#nome_E")
 const nome_R = document.querySelector("#nome_R")
+const classe = document.querySelector("#classe")
 
 console.log(nome_champ)
 let champ_atual = nome_champ
@@ -184,6 +185,8 @@ fetch(`http://ddragon.leagueoflegends.com/cdn/12.13.1/data/pt_BR/champion/${nome
       nome_W.innerText = "W - "+ nome.spells[1].name
       nome_E.innerText = "E - "+ nome.spells[2].name
       nome_R.innerText = "R - "+ nome.spells[3].name
+
+      classe.innerText = nome.tags[0] +" / "+ nome.tags[1]
 
       mana_Q.innerText = nome.spells[0].costBurn
       mana_W.innerText = nome.spells[1].costBurn
