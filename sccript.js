@@ -26,7 +26,7 @@ function confirmar(event) {
 
 function sup() {
     if(verificar == true){
-        window.location.pathname = "suporte.html"
+        window.location.pathname = "suporte_inicio.html"
     }
     else{
         alert("Nick não infromado")

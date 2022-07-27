@@ -34,6 +34,8 @@
     transition: all 500ms ease;
     border-radius: 20px;
     width: 70%;
+    padding-left: 2px;
+    padding-right: 2px;
     
 }
 
@@ -103,4 +105,8 @@
 
 .ok{
     background-color: green;
+}
+
+a{
+    text-decoration: none;
 }

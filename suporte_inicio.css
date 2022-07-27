@@ -66,121 +66,62 @@
     border: 2px solid black;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    
     gap: 40px;
 }
 
-#cabeca{
+#escolha{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border: 1px solid black;
-    padding: 10px 0px;
-    border-radius: 20px;
-    background: linear-gradient(rgba(137, 43, 226, 0.854),white)
+    width: 25%;
+    
 }
 
-#titulo{
-    font-size: 1.5em;
+#escreva{
+    
+    border-radius: 20px;
+    width: 100%;
+}
+
+#botao{
+    transition: all 500ms ease;
+    padding: 2px;
+    border-radius: 20px;
+}
+
+#botao:hover{
+    transform:scale(1.3)
+}
+
+.linha{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.champ{
+    transition: all 500ms ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2px;
     
-
 }
 
-#historia_texto{
+.nome{
     display: none;
 }
 
-#historia{
+.champ:hover .nome{
+    transition: all 5s ease;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 5px;
-   
-    
 }
 
-#titulo_historia{
-    width: 50%;
-    background: linear-gradient(rgba(137, 43, 226, 0.854),white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-}
-
-#historia:hover #historia_texto{
-    display: flex;
-    font-size: 1.2em;
+.champ:hover{
+    background-color: rgba(84, 49, 80, 0.285);
     
 }
 
 a{
     text-decoration: none;
 }
-
-.habilidade_tudo{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border: 2px solid blueviolet;
-    border-radius: 10px;
-    padding: 5px;
-}
-
-.habilidade{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.nome_habilidades{
-    color: rgba(158, 79, 232, 0.854);
-    border-bottom: 1px solid blueviolet;
-    font-size: 1.05em;
-}
-
-.habilidade_disc{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.div_estat{
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-}
-
-.div_estat_tudo{
-    display: flex;
-    flex-direction: row;
-    gap: 70px;
-}
-
-.estat{
-    color: blueviolet;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
