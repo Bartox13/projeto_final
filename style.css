@@ -14,12 +14,14 @@
 }
 
 #div_info{
-    background-color: #2c1e39;
+    background: linear-gradient(black,blueviolet);
     width: 100%;
     border: solid 1px white;
     display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
+   
+    gap: 200px;
+    align-items: center;
 }
 
 #form{
@@ -33,9 +35,10 @@
 #nick_input{
     transition: all 500ms ease;
     border-radius: 20px;
-    width: 70%;
+    width: 80%;
     padding-left: 2px;
     padding-right: 2px;
+    box-shadow: 7px 5px black;
     
 }
 
@@ -56,54 +59,24 @@
     transform:scale(1.3)
 }
 
-#nick_input:hover{
-    transform:scale(1.3)
-}
-
 .frase{
-    color: rgba(137, 43, 226, 0.646);
+    color: rgba(175, 130, 217, 0.646);
 }
 
-#div_escolha{
-    height: 25%;
+
+
+#titulo{
+    
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
     align-items: center;
-
-}
-
-#escolha{
-    height: 90%;
-    width: 99%;
-    display: flex;
-    flex-direction: row;
-    border-radius: 20px;
-}
-
-#suporte{
-    transition: all 500ms ease;
-    width: 50%;
-    border-radius: 20px;
-    background-color: rgb(98, 78, 117);
-}
-
-#adc{
-    transition: all 500ms ease;
-    width: 50%;
-    border-radius: 20px;
-    background-color: #5f2497;
-}
-
-#suporte:hover{
-    transform:scale(1.1)
-}
-
-#adc:hover{
-    transform:scale(1.1)
+    justify-content: center;
+    background: linear-gradient(black,rgb(39, 5, 71));
+    
 }
 
 .ok{
+    transition: all 2s ease;
     background-color: green;
 }
 
