@@ -11,11 +11,7 @@ function confirmar(event) {
     event.preventDefault()
     
     if(nick.value){
-        botao_confirmar.classList.remove("nao_confirmad")
-        botao_confirmar.classList.add("ok")
-        
-        window.location.pathname = "suporte_inicio.html"
-        
+        window.location.href = "suporte_inicio.html"
     }
     else{
         alert("Preencha Corretamente")
