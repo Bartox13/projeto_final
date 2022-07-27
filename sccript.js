@@ -11,7 +11,7 @@ function confirmar(event) {
     event.preventDefault()
     
     if(nick.value){
-        window.location.href = "suporte_inicio.html"
+        window.location.href = "./suporte_inicio.html"
     }
     else{
         alert("Preencha Corretamente")
