@@ -55,7 +55,7 @@ console.log(nome_champ)
 let champ_atual = nome_champ
 
 
-fetch(`http://ddragon.leagueoflegends.com/cdn/12.13.1/data/pt_BR/champion/${nome_champ}.json`).then(res => res.json())
+fetch(`https://ddragon.leagueoflegends.com/cdn/12.13.1/data/pt_BR/champion/${nome_champ}.json`).then(res => res.json())
 .then(conteudo => {
       let nome
       if(nome_champ == "Alistar"){
