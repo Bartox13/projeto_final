@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
 #maior{
     padding: 0;
     margin: 0;
@@ -15,11 +21,11 @@
 
 #div_info{
     background: linear-gradient(black,blueviolet);
-    width: 100%;
+    width: 20%;
+    /* min-width: 30vw; */
     border: solid 1px white;
     display: flex;
     flex-direction: column;
-   
     gap: 200px;
     align-items: center;
 }
@@ -51,6 +57,15 @@
 
 }
 
+#div_imagem{
+    width: 80%;
+    
+}
+
+#div_imagem img{
+    object-fit: cover;
+}
+
 .nao_confirmado{
     background-color: blueviolet;
 }
@@ -76,6 +91,10 @@
 }
 
 
+
 a{
     text-decoration: none;
 }
+
+
+

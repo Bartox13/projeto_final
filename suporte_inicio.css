@@ -66,9 +66,11 @@
     padding: 20px;
     border: 2px solid black;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap; /* basicamente, coloque tudo la dentro enquanto estiver espaço*/
+    justify-content: center;
     gap: 40px;
     box-shadow: 5px 5px black;
+    
 }
 
 #escolha{
@@ -93,12 +95,7 @@
     transform:scale(1.3)
 }
 
-.linha{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: space-between;
-}
+
 
 .champ{
     transition: all 500ms ease;
@@ -107,24 +104,27 @@
     justify-content: center;
     align-items: center;
     gap: 2px;
+    
 }
 
 .nome{
     max-width: 0;
     overflow: hidden;
+    font-size: 0.99em;
+   
 }
 
 .champ:hover .nome{
-    transition: all 1s ease;
     max-width: 400px;
+    
 }
 
 .champ:hover{
     background-color: rgba(84, 49, 80, 0.285);
     box-shadow: 7px 5px black;
-    
 }
 
 a{
     text-decoration: none;
+    color: black;
 }

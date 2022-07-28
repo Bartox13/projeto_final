@@ -11,6 +11,7 @@ function confirmar(event) {
     event.preventDefault()
     
     if(nick.value){
+        localStorage.setItem("nick",nick.value) //primeiro valor é a variavel criada e o segundo oq vc quer
         window.location.href = "./suporte_inicio.html"
     }
     else{

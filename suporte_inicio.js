@@ -1,153 +1,107 @@
-const escreva = document.querySelector("#escreva")
-const botao = document.querySelector("#botao")
-const form = document.querySelector("#escolha")
+const escreva = document.querySelector("#escreva");
+const botao = document.querySelector("#botao");
+const form = document.querySelector("#escolha");
+const nick = localStorage.getItem("nick")
+const nick_antigo = document.querySelector("#nick h3")
+const corpo = document.querySelector("#corpo")
 
-botao.addEventListener("click",ler)
-form.addEventListener("submit",ler)
+nick_antigo.innerText = nick  
 
-function ler(event){
-event.preventDefault()
-if(escreva.value == "Alistar"){
-    console.log(escreva.value)
-    window.location.href = `suporte.html?champ=${escreva.value}`
+const champ_permitidos = [
+  "Alistar",
+  "Amumu",
+  "Ashe",
+  "Bard",
+  "Blitzcrank",
+  "Brand",
+  "Braum",
+  "Galio",
+  "Janna",
+  "Karma",
+  "Leona",
+  "Lulu",
+  "Lux",
+  "Maokai",
+  "Morgana",
+  "Nami",
+  "Nautilus",
+  "Pyke",
+  "Rakan",
+  "Rell",
+  "Renata",
+  "Senna",
+  "Seraphine",
+  "Shaco",
+  "Sona",
+  "Soraka",
+  "Swain",
+  "TahmKench",
+  "Taric",
+  "Thresh",
+  "Velkoz",
+  "Xerath",
+  "Yuumi",
+  "Zilean",
+  "Zyra",
+];
+
+
+
+botao.addEventListener("click", ler);
+form.addEventListener("submit", ler);
+
+// fetch(`https://ddragon.leagueoflegends.com/cdn/12.13.1/data/pt_BR/champion.json`).then(res => res.json())
+//   .then(conteudo => {
+//     let pesquisa = ["Support"]
+//     //console.log(conteudo.data)
+//     //console.log(conteudo.data.Ashe)
+//     //console.log(conteudo.data["Ashe"])
+//     for(let champ in conteudo.data){
+//         let found = conteudo.data[champ].tags.every(r => pesquisa.includes(r))
+        
+//         if(found){
+//             console.log(conteudo.data[champ])
+//         }
+//     }
+
+//   })
+
+function ler(event) {
+  event.preventDefault();
+  if(escreva.value.toLowerCase() == "bardo"){
+    escreva.value = "bard"
+  }
+  if(champ_permitidos.find(nome => nome.toLowerCase() == escreva.value.toLowerCase())){ //TOLOWERCASE() faz ser tudo minusculo
+
+       window.location.href = `suporte.html?champ=${escreva.value}`
+   }
+   else{
+       alert("Campeão não encontrado")
+       escreva.value = ""
+       
+   }
    
-}else
-if(escreva.value == "Amumu"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Ashe"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-}else
-if(escreva.value == "Bard"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Blitzcrank"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Brand"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Braum"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-   
-}else
-if(escreva.value == "Galio"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Janna"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Karma"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Leona"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Lulu"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Lux"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Maokai"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Morgana"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Nami"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Nautilus"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-}else
-if(escreva.value == "Pyke"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Rakan"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Rell"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Renata"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Senna"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Seraphine"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Shaco"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-}else
-if(escreva.value == "Sona"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Soraka"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Swain"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "TahmKench"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Taric"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Thresh"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Velkoz"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-
-}else
-if(escreva.value == "Xerath"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Yuumi"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Zilean"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-    
-}else
-if(escreva.value == "Zyra"){
-    window.location.href = `suporte.html?champ=${escreva.value}`
-}else{
-    alert("Campeão não encontrado")
-    escreva.value = ""
-    
 }
 
-}
+
+
+champ_permitidos.forEach(nome => {
+    let nome_corrigido = nome
+    if(nome == "TahmKench"  ){
+        nome_corrigido = "Tahm_Kench"
+    }else
+    if(nome == "Renata"){
+        nome_corrigido = "Renata_Glasc"
+    }else
+    if(nome == "Velkoz"){
+        nome_corrigido = "Vel'Koz"
+    }
+    //o + para ir add
+    corpo.innerHTML += `<a href="./suporte.html?champ=${nome}"> 
+    <div id="${nome}" class="champ">
+        <img src="http://ddragon.leagueoflegends.com/cdn/12.13.1/img/champion/${nome}.png" alt="${nome}" height="90px">
+        <p class="nome">${nome_corrigido}</p>
+    </div>
+    </a>`
+})
 

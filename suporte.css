@@ -150,6 +150,7 @@
 
 a{
     text-decoration: none;
+    color: black;
 }
 
 .habilidade_tudo{
@@ -170,6 +171,7 @@ a{
     display: flex;
     flex-direction: row;
     gap: 20px;
+    align-items: center;
 }
 
 .nome_habilidades{
@@ -178,12 +180,7 @@ a{
     font-size: 1.05em;
 }
 
-.habilidade_disc{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-}
 
 .div_estat{
     display: flex;
@@ -193,8 +190,8 @@ a{
 
 .div_estat_tudo{
     display: flex;
-    flex-direction: row;
-    gap: 70px;
+    flex-wrap: wrap;
+    gap: 35px;
 }
 
 .estat{
