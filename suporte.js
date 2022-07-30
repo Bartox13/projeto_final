@@ -53,6 +53,7 @@ const dicas_inimigos_tudo = document.querySelector("#dicas_inimigos_tudo");
 const nick = localStorage.getItem("nick");
 const nick_antigo = document.querySelector("#nick h3");
 
+
 nick_antigo.innerText = nick;
 
 fetch(

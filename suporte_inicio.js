@@ -5,6 +5,8 @@ const nick = localStorage.getItem("nick")
 const nick_antigo = document.querySelector("#nick h3")
 const corpo = document.querySelector("#corpo")
 
+
+
 nick_antigo.innerText = nick  
 
 const champ_permitidos = [
@@ -103,5 +105,21 @@ champ_permitidos.forEach(nome => {
         <p class="nome">${nome_corrigido}</p>
     </div>
     </a>`
+    
 })
+
+// const champ = document.querySelectorAll(".champ")
+
+// champ.forEach(champ_nome =>{
+//     champ_nome.addEventListener("mouseover",()=>verificar(champ_nome))
+    
+    
+// })
+
+// function verificar(champ_nome){
+//     console.log(champ_nome.id)
+//    const elemento = document.querySelector(`#${champ_nome.id} img`)
+//    elemento.src = "http://ddragon.leagueoflegends.com/cdn/12.13.1/img/champion/Alistar.png"
+   
+// }
 

@@ -46,10 +46,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    gap: 10%;
     
     
 }
+
+#outros a{
+    transition: all 500ms ease;
+    padding: 0px 5px;
+    border-bottom:1px dotted black;
+    border-right: 1px dotted black;
+    border-radius: 15px;
+}
+
+#outros a:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 2px black;
+}
+
 
 #back{
     background-image: url(http://trumpwallpapers.com/wp-content/uploads/League-Of-Legends-Wallpaper-16-3840-x-2160.jpg);
