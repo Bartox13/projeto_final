@@ -97,7 +97,11 @@ champ_permitidos.forEach(nome => {
     }else
     if(nome == "Velkoz"){
         nome_corrigido = "Vel'Koz"
+    }else
+    if(nome == "Bard"){
+        nome_corrigido = "Bardo"
     }
+
     //o + para ir add
     corpo.innerHTML += `<a href="./suporte.html?champ=${nome}"> 
     <div id="${nome}" class="champ">
