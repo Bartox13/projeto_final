@@ -98,7 +98,7 @@ a{
     display: flex;
     flex-direction: row;
     padding: 30px;
-    border-radius: 45%;
+    border-radius: 35%;
     overflow: hidden;
 
 }
