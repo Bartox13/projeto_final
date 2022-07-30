@@ -84,7 +84,7 @@
     display: flex;
     flex-wrap: wrap; /* basicamente, coloque tudo la dentro enquanto estiver espaço*/
     justify-content: center;
-    gap: 10px;
+    gap: 2px;
     box-shadow: 5px 5px black;
     
 }
@@ -169,5 +169,10 @@ a{
 
 }
 
-
+@media (max-width:1215px){
+    #corpo{
+        
+        width: 90%;
+    }
+}
 
