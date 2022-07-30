@@ -52,7 +52,9 @@ champ_permitidos.forEach((nome) => {
     nome_corrigido = "Vel'Koz";
   }
   //o + para ir add
-  corpo.innerHTML += `<div class="champ" id="${nome}">
+  corpo.innerHTML += 
+  `<div class="Max_Tam">
+  <div class="champ" id="${nome}">
     <button class="botao_troca" id="volta" onclick = "voltar()"> <p> < </p></button>
     <div class="skin">
         <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${nome}_0.jpg" alt="${nome}" height="300px">
@@ -60,6 +62,7 @@ champ_permitidos.forEach((nome) => {
 
     </div>
     <button class="botao_troca" id="avança" onclick="avancar()"> <p> > </p></button>
+</div>
 </div>`;
 });
 

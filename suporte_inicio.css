@@ -74,6 +74,7 @@
 
 
 #corpo{
+    transition: all 500ms ease;
     background-color: white;
     width: 60%;
     height: 100%;
@@ -89,10 +90,13 @@
 }
 
 #escolha{
+    transition: all 500ms ease;
     display: flex;
     width: 25%;
     
 }
+
+
 
 #escreva{
     
@@ -127,6 +131,23 @@
     overflow: hidden;
     font-size: 0.99em;
    
+}
+
+@media (max-width:700px){
+    
+    #corpo{
+        transition: all 500ms ease;
+        width: 80%;
+    }
+    #escolha{
+        transition: all 500ms ease;
+        width: 50%;
+    }
+    .champ img {
+        transition: all 500ms ease;
+        width: 70px;
+        height: 70px;
+    }
 }
 
 .champ:hover .nome{

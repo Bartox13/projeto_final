@@ -72,9 +72,13 @@
     background-size: cover;
 }
 
+#icone{
+    transition: all 500ms ease;
 
+}
 
 #corpo{
+    transition: all 500ms ease;
     background-color: white;
     width: 60%;
     height: 100%;
@@ -97,10 +101,12 @@
     border-radius: 20px;
     background: linear-gradient(rgba(137, 43, 226, 0.854),white);
     box-shadow: 2px 3px black;
+    text-align: center;
     
 }
 
 #titulo{
+    transition: all 500ms ease;
     font-size: 1.5em;
     display: flex;
     flex-direction: column;
@@ -225,23 +231,20 @@ a{
     max-height: 0px;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     width: 100%;
 }
 
 #estatisticas_tudo:hover #estatisticas{
     transition: all 1s ease;
-    max-height: 400px;
+    max-height: 900px;
     opacity: 1;
+
 }
 
-.linhas_estatisticas{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
-}
+
 
 .dados_estatisticas{
     display: flex;
@@ -308,7 +311,21 @@ ul{
     gap: 5px;
 }
 
-
+@media (max-width:800px){
+    #corpo{
+        transition: all 500ms ease;
+        width: 80%;
+    }
+    #icone  {
+        transition: all 500ms ease;
+        width: 90px;
+        height: 101px;
+    }
+    #titulo{
+        transition: all 500ms ease;
+        font-size: 1.3em;
+    }
+}
 
 
 

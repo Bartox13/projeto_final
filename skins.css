@@ -74,8 +74,9 @@
 
 
 #corpo{
+    transition: all 500ms ease;
     background-color: white;
-    width: 60%;
+    width: 70%;
     height: 100%;
     border-radius: 20px;
     padding: 20px;
@@ -83,7 +84,7 @@
     display: flex;
     flex-wrap: wrap; /* basicamente, coloque tudo la dentro enquanto estiver espaço*/
     justify-content: center;
-    gap: 40px;
+    gap: 10px;
     box-shadow: 5px 5px black;
     
 }
@@ -110,6 +111,15 @@ a{
     
 }
 
+.Max_Tam{
+    width: 366.42px;
+    height: 414.33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
 .skin{
     display: flex;
     flex-direction: column;
@@ -125,6 +135,7 @@ a{
     max-width: 0;
     max-height: 0;
     overflow: hidden;
+    
 }
 
 .champ:hover .botao_troca{
@@ -141,7 +152,7 @@ a{
     transition: all 500ms ease;
 }
 
-.botao_troca:hover p{
+ .botao_troca:hover p{
     transform: scale(2);
 }
 
@@ -157,4 +168,6 @@ a{
     max-width: 165px;
 
 }
+
+
 

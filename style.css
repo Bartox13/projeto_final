@@ -21,6 +21,7 @@ body{
 }
 
 #div_info{
+    transition: all 500ms ease;
     background: linear-gradient(black,blueviolet);
     width: 20%;
     /* min-width: 30vw; */
@@ -30,6 +31,8 @@ body{
     gap: 200px;
     align-items: center;
 }
+
+
 
 #form{
     display: flex;
@@ -58,9 +61,25 @@ body{
 
 }
 
+
+
 #div_imagem{
+    transition: all 500ms ease;
     width: 80%;
     
+}
+
+
+
+@media (max-width:1000px){
+    #div_info{
+        transition: all 500ms ease;
+        width: 40%;
+    }
+    #div_imagem{
+        transition: all 500ms ease;
+        width: 60%;
+    }
 }
 
 #div_imagem img{
@@ -77,6 +96,7 @@ body{
 
 .frase{
     color: rgba(175, 130, 217, 0.646);
+    text-align: center;
 }
 
 

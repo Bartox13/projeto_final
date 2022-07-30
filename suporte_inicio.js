@@ -45,6 +45,7 @@ const champ_permitidos = [
   "Yuumi",
   "Zilean",
   "Zyra",
+  
 ];
 
 
