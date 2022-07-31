@@ -84,15 +84,17 @@ form{
 @media (max-width:900px){
     #div_info{
         transition: all 500ms ease;
-        width: 70%;
+        width: 50%;
     }
     
 }
 
+
+
  @media (max-height:600px){
     #div_info{
-        
-        gap: 30px;
+        height: 70%;
+       
     }
 }
 
