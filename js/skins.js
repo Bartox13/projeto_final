@@ -43,6 +43,7 @@ const champ_permitidos = [
   "Yuumi",
   "Zilean",
   "Zyra",
+  
 ];
 
 botao.addEventListener("click", ler);

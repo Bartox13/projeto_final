@@ -26,13 +26,15 @@
 
 #div_info{
     transition: all 500ms ease;
-    background: linear-gradient(black,blueviolet);
-    width: 40%;
-    height: 100%;
+    /* background-color: rgb(64, 10, 112); */
+    background-color: #531689;
+    width: 30%;
+    height: 50%;
     border: solid 1px white;
+    padding-top:40px ;
     display: flex;
     flex-direction: column;
-    gap: 200px;
+    gap: 50px;
     align-items: center;
 }
 
@@ -60,10 +62,10 @@ form{
 #confirmar{
     transition: all 500ms ease;
     border-radius: 20px;
-    padding-left: 3px;
-    padding-right: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
     background-color: blueviolet;
-    width: 30%;
+    
 }
 
 #confirmar:hover{
@@ -73,7 +75,7 @@ form{
 }
 
 .frase{
-    color: rgba(175, 130, 217, 0.646);
+    color: #9daacc;
     text-align: center;
     text-align: center;
     font-size: 1.3em;
@@ -86,3 +88,18 @@ form{
     }
     
 }
+
+ @media (max-height:600px){
+    #div_info{
+        
+        gap: 30px;
+    }
+}
+
+@media (max-height:500px){
+    #div_info{
+        
+        gap: 20px;
+    }
+}
+
