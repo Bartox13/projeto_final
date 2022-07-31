@@ -60,6 +60,7 @@ form{
 }
 
 #confirmar{
+    color: black;
     transition: all 500ms ease;
     border-radius: 20px;
     padding-left: 10px;
@@ -103,5 +104,9 @@ form{
         
         gap: 20px;
     }
+}
+
+a{
+    text-decoration: none;
 }
 
