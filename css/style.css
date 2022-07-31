@@ -4,27 +4,31 @@
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
-body{
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+#max{
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    height: 100%;
 }
 
-#maior{
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
+#back{
+    background-image: url(https://ic-cdn.flipboard.com/nme.com/8eafcabfb3692c300eb1616f98b117334ad1e12a/_xlarge.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: aqua;
     height: 100vh;
-    width: 100vw;
-
 }
 
 #div_info{
     transition: all 500ms ease;
     background: linear-gradient(black,blueviolet);
-    width: 20%;
-    
+    width: 40%;
+    height: 100%;
     border: solid 1px white;
     display: flex;
     flex-direction: column;
@@ -32,14 +36,14 @@ body{
     align-items: center;
 }
 
-
-
-#form{
+form{
     display: flex;
     flex-direction: column;
     gap: 15px;
     justify-content: center;
     align-items: center;
+    width: 80%;
+    
 }
 
 #nick_input{
@@ -49,7 +53,7 @@ body{
     width: 80%;
     padding-left: 2px;
     padding-right: 2px;
-    box-shadow: 7px 5px black;
+    box-shadow: 5px 5px black;
     
 }
 
@@ -58,65 +62,27 @@ body{
     border-radius: 20px;
     padding-left: 3px;
     padding-right: 3px;
-    
-
-}
-
-
-
-#div_imagem{
-    transition: all 500ms ease;
-    width: 80%;
-    
-}
-
-
-
-@media (max-width:1000px){
-    #div_info{
-        transition: all 500ms ease;
-        width: 40%;
-    }
-    #div_imagem{
-        transition: all 500ms ease;
-        width: 60%;
-    }
-}
-
-#div_imagem img{
-    object-fit: cover;
-}
-
-.nao_confirmado{
     background-color: blueviolet;
+    width: 30%;
 }
 
 #confirmar:hover{
-    transform:scale(1.3)
+    transform:scale(1.3);
+    box-shadow: 3px 3px black;
+    
 }
 
 .frase{
     color: rgba(175, 130, 217, 0.646);
     text-align: center;
+    text-align: center;
+    font-size: 1.3em;
 }
 
-
-
-#titulo{
-    
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(black,rgb(39, 5, 71));
+@media (max-width:900px){
+    #div_info{
+        transition: all 500ms ease;
+        width: 70%;
+    }
     
 }
-
-
-
-a{
-    text-decoration: none;
-}
-
-
-
