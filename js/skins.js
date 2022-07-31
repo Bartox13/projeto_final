@@ -1,6 +1,9 @@
 const nick = localStorage.getItem("nick");
 const nick_antigo = document.querySelector("#nick h3");
 const corpo = document.querySelector("#corpo");
+const escreva = document.querySelector("#escreva");
+const botao = document.querySelector("#botao");
+const form = document.querySelector("#escolha");
 
 nick_antigo.innerText = nick;
 
@@ -42,6 +45,49 @@ const champ_permitidos = [
   "Zyra",
 ];
 
+botao.addEventListener("click", ler);
+form.addEventListener("submit", ler);
+
+function ler(event) {
+  event.preventDefault();
+  if(escreva.value.toLowerCase() == "bardo"){
+    escreva.value = "bard"
+  }
+  if(champ_permitidos.find(nome => nome.toLowerCase() == escreva.value.toLowerCase())){ //TOLOWERCASE() faz ser tudo minusculo
+    
+    champ.forEach((champ_nome_procura) => {
+      if(champ_nome_procura.id != tocapitalcase(escreva.value)){
+        const elemento = document.querySelector(`#${champ_nome_procura.id}`)
+        elemento.classList.add("sumir")
+      }
+      else{
+        const elemento = document.querySelector(`#${champ_nome_procura.id}`)
+        
+        if(elemento.classList.contains("sumir")){
+          elemento.classList.remove("sumir")
+
+        }
+      }
+    });
+   }
+   else{
+    
+    champ.forEach((champ_nome_procura) => {
+     
+        const elemento = document.querySelector(`#${champ_nome_procura.id}`)
+        elemento.classList.remove("sumir")
+    
+      
+    });
+       alert("Campeão não encontrado")
+       escreva.value = ""
+       
+   }
+   
+}
+
+
+
 champ_permitidos.forEach((nome) => {
   let nome_corrigido = nome;
   if (nome == "TahmKench") {
@@ -53,7 +99,7 @@ champ_permitidos.forEach((nome) => {
   }
   //o + para ir add
   corpo.innerHTML += 
-  `<div class="Max_Tam">
+  `<div class="Max_Tam" id="${nome}">
   <div class="champ" id="${nome}">
     <button class="botao_troca" id="volta" onclick = "voltar()"> <p> < </p></button>
     <div class="skin">
@@ -180,4 +226,8 @@ async function voltar() {
 
 function sleep(time) {
   return new Promise((resolve) => setTimeout(resolve, time));
+}
+
+function tocapitalcase(texto) {
+  return texto.charAt(0).toUpperCase() + texto.slice(1); //criando uma função , precisa do return pra poder usar a função depois
 }

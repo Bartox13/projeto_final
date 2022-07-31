@@ -53,21 +53,7 @@ const champ_permitidos = [
 botao.addEventListener("click", ler);
 form.addEventListener("submit", ler);
 
-// fetch(`https://ddragon.leagueoflegends.com/cdn/12.13.1/data/pt_BR/champion.json`).then(res => res.json())
-//   .then(conteudo => {
-//     let pesquisa = ["Support"]
-//     //console.log(conteudo.data)
-//     //console.log(conteudo.data.Ashe)
-//     //console.log(conteudo.data["Ashe"])
-//     for(let champ in conteudo.data){
-//         let found = conteudo.data[champ].tags.every(r => pesquisa.includes(r))
-        
-//         if(found){
-//             console.log(conteudo.data[champ])
-//         }
-//     }
 
-//   })
 
 function ler(event) {
   event.preventDefault();
@@ -113,18 +99,5 @@ champ_permitidos.forEach(nome => {
     
 })
 
-// const champ = document.querySelectorAll(".champ")
 
-// champ.forEach(champ_nome =>{
-//     champ_nome.addEventListener("mouseover",()=>verificar(champ_nome))
-    
-    
-// })
-
-// function verificar(champ_nome){
-//     console.log(champ_nome.id)
-//    const elemento = document.querySelector(`#${champ_nome.id} img`)
-//    elemento.src = "http://ddragon.leagueoflegends.com/cdn/12.13.1/img/champion/Alistar.png"
-   
-// }
 

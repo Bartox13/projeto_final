@@ -65,7 +65,7 @@ fetch(
 
     titulo_nome.innerHTML = nome.name;
 
-    console.log(nome);
+    console.log(nome)
     nome_passiva.innerHTML = "Passiva - " + nome.passive.name;
     nome_Q.innerHTML = "Q - " + nome.spells[0].name;
     nome_W.innerHTML = "W - " + nome.spells[1].name;
@@ -89,7 +89,7 @@ fetch(
         break;
       }
     }
-    console.log(i);
+    
     if (i == 0) {
       dicas_aliados_tudo.classList.remove("dicas_aliados_tudo");
       dicas_aliados_tudo.classList.add("sumir");
@@ -133,15 +133,20 @@ fetch(
     mana_Q.innerHTML = nome.spells[0].costBurn;
     mana_W.innerHTML = nome.spells[1].costBurn;
     if (nome_champ == "Yuumi") {
-      mana_E.innerHTML = "40 / 45 / 50 / 55 / 60 (+ 12% Mana_Max)";
+      mana_E.innerHTML = "40/45/50/55/60 (+ 12% Mana_Max)";
     } else {
       mana_E.innerHTML = nome.spells[2].costBurn;
     }
-
+    
     mana_R.innerHTML = nome.spells[3].costBurn;
     
+    if(nome_champ == "Zyra"){
+      cooldown_W.innerHTML = "18 / 16 / 14 / 12 / 10"
+    } else{
+      cooldown_W.innerHTML = nome.spells[1].cooldownBurn;
+    }
     
-    cooldown_W.innerHTML = nome.spells[1].cooldownBurn;
+
     if (nome_champ == "Rakan") {
       cooldown_E.innerHTML = nome.spells[2].effectBurn[4];
       cooldown_Q.innerHTML = nome.spells[0].effectBurn[5];
@@ -150,7 +155,12 @@ fetch(
       cooldown_Q.innerHTML = nome.spells[0].cooldownBurn;
     }
 
-    cooldown_R.innerHTML = nome.spells[3].cooldownBurn;
+    if(nome_champ == "TahmKench"){
+      cooldown_R.innerHTML = "120/100/80"
+    }else{
+      cooldown_R.innerHTML = nome.spells[3].cooldownBurn;
+    }
+    
     sub_nome.innerHTML = nome.title;
     historia_texto.innerHTML = nome.lore;
     habilidade_Q_disc.innerHTML = nome.spells[0].description;
