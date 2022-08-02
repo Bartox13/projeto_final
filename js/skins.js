@@ -97,7 +97,9 @@ champ_permitidos.forEach((nome) => {
     nome_corrigido = "Renata_Glasc";
   } else if (nome == "Velkoz") {
     nome_corrigido = "Vel'Koz";
-  }
+  }else if(nome == "Bard"){
+    nome_corrigido = "Bardo"
+}
   //o + para ir add
   corpo.innerHTML += 
   `<div class="Max_Tam" id="${nome}">
@@ -155,11 +157,11 @@ async function avancar() {
       }
       champ_antigo = nome_id;
       elemento_fora_antigo = elemento_fora;
-      console.log(elemento_fora_antigo);
+      
       elemento_nome_antigo = elemento_nome_fora;
-      console.log(nome_antigo);
+      
       nome_antigo = nome.name;
-      console.log(nome_antigo);
+      
 
       if (nome.skins[i]) {
         x = nome.skins[i].num;
@@ -189,7 +191,7 @@ async function voltar() {
         let contator = 0;
         for (let z = 0; nome.skins[z]; z++) {
           contator++;
-          console.log(contator);
+          
         }
         i = contator - 1;
       } else {
@@ -201,7 +203,7 @@ async function voltar() {
       elemento_nome_antigo = elemento_nome_fora;
 
       nome_antigo = nome.name;
-      console.log(nome_antigo);
+      
 
       if (nome.skins[i]) {
         x = nome.skins[i].num;
@@ -215,7 +217,7 @@ async function voltar() {
         let contator = 0;
         for (let z = 0; nome.skins[z]; z++) {
           contator++;
-          console.log(contator);
+          
         }
         i = contator - 1;
         x = nome.skins[i].num;
