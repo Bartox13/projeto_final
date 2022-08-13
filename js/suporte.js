@@ -177,5 +177,10 @@ fetch(
   });
 
 function tocapitalcase(texto) {
+  if(texto){
   return texto.charAt(0).toUpperCase() + texto.slice(1); //criando uma função , precisa do return pra poder usar a função depois
+  }
+  else{
+    window.location.pathname = "suporte_inicio.html"
+  }
 }

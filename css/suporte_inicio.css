@@ -132,7 +132,9 @@
     max-width: 0;
     overflow: hidden;
     font-size: 0.99em;
-   
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 @media (max-width:700px){
@@ -165,4 +167,9 @@
 a{
     text-decoration: none;
     color: black;
+}
+
+.sumir{
+    
+    display: none;
 }

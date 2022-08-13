@@ -1,13 +1,11 @@
 const escreva = document.querySelector("#escreva");
 const botao = document.querySelector("#botao");
 const form = document.querySelector("#escolha");
-const nick = localStorage.getItem("nick")
-const nick_antigo = document.querySelector("#nick h3")
-const corpo = document.querySelector("#corpo")
+const nick = localStorage.getItem("nick");
+const nick_antigo = document.querySelector("#nick h3");
+const corpo = document.querySelector("#corpo");
 
-
-
-nick_antigo.innerText = nick  
+nick_antigo.innerText = nick;
 
 const champ_permitidos = [
   "Alistar",
@@ -45,59 +43,63 @@ const champ_permitidos = [
   "Yuumi",
   "Zilean",
   "Zyra",
-  
 ];
-
-
 
 botao.addEventListener("click", ler);
 form.addEventListener("submit", ler);
 
-
-
-function ler(event) {
-  event.preventDefault();
-  if(escreva.value.toLowerCase() == "bardo"){
-    escreva.value = "bard"
+champ_permitidos.forEach((nome) => {
+  let nome_corrigido = nome;
+  if (nome == "TahmKench") {
+    nome_corrigido = "Tahm_Kench";
+  } else if (nome == "Renata") {
+    nome_corrigido = "Renata_Glasc";
+  } else if (nome == "Velkoz") {
+    nome_corrigido = "Vel'Koz";
+  } else if (nome == "Bard") {
+    nome_corrigido = "Bardo";
   }
-  if(champ_permitidos.find(nome => nome.toLowerCase() == escreva.value.toLowerCase())){ //TOLOWERCASE() faz ser tudo minusculo
 
-       window.location.href = `suporte.html?champ=${escreva.value}`
-   }
-   else{
-       alert("Campeão não encontrado")
-       escreva.value = ""
-       
-   }
-   
-}
-
-
-
-champ_permitidos.forEach(nome => {
-    let nome_corrigido = nome
-    if(nome == "TahmKench"  ){
-        nome_corrigido = "Tahm_Kench"
-    }else
-    if(nome == "Renata"){
-        nome_corrigido = "Renata_Glasc"
-    }else
-    if(nome == "Velkoz"){
-        nome_corrigido = "Vel'Koz"
-    }else
-    if(nome == "Bard"){
-        nome_corrigido = "Bardo"
-    }
-
-    //o + para ir add
-    corpo.innerHTML += `<a href="./suporte.html?champ=${nome}"> 
-    <div id="${nome}" class="champ">
+  //o + para ir add
+  corpo.innerHTML += `<a class="champ" id="${nome}" href="./suporte.html?champ=${nome}"> 
+    <div  >
         <img src="http://ddragon.leagueoflegends.com/cdn/12.13.1/img/champion/${nome}.png" alt="${nome}" height="90px">
         <p class="nome">${nome_corrigido}</p>
     </div>
-    </a>`
-    
-})
+    </a>`;
+});
 
+function ler(event) {
+  const champ = document.querySelectorAll(".champ ");
+  event.preventDefault();
+  if (escreva.value.toLowerCase() == "bardo") {
+    escreva.value = "bard";
+  }
 
+  
 
+  champ.forEach((champ_nome) => {
+    const elemento = document.querySelector(`#${champ_nome.id}`);
+    elemento.classList.add("sumir");
+  });
+
+  champ_permitidos.forEach((nome) => {
+    if(nome.toLowerCase().includes(escreva.value.toLowerCase())) {
+      champ.forEach((champ_nome) => {
+        if (champ_nome.id == nome) {
+          const elemento = document.querySelector(`#${champ_nome.id}`);
+          elemento.classList.remove("sumir");
+        }
+      });
+    } 
+  });
+  if(!champ_permitidos.find(nome => nome.toLowerCase().includes(escreva.value.toLowerCase()))){
+    champ.forEach((champ_nome) => {
+        
+          const elemento = document.querySelector(`#${champ_nome.id}`);
+          elemento.classList.remove("sumir");
+        
+      });
+      alert("Campeão não encontrado")
+  }
+}

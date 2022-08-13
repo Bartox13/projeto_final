@@ -43,7 +43,6 @@ const champ_permitidos = [
   "Yuumi",
   "Zilean",
   "Zyra",
-  
 ];
 
 botao.addEventListener("click", ler);
@@ -51,43 +50,36 @@ form.addEventListener("submit", ler);
 
 function ler(event) {
   event.preventDefault();
-  if(escreva.value.toLowerCase() == "bardo"){
-    escreva.value = "bard"
+  if (escreva.value.toLowerCase() == "bardo") {
+    escreva.value = "bard";
   }
-  if(champ_permitidos.find(nome => nome.toLowerCase() == escreva.value.toLowerCase())){ //TOLOWERCASE() faz ser tudo minusculo
-    
-    champ.forEach((champ_nome_procura) => {
-      if(champ_nome_procura.id != tocapitalcase(escreva.value)){
-        const elemento = document.querySelector(`#${champ_nome_procura.id}`)
-        elemento.classList.add("sumir")
-      }
-      else{
-        const elemento = document.querySelector(`#${champ_nome_procura.id}`)
-        
-        if(elemento.classList.contains("sumir")){
-          elemento.classList.remove("sumir")
 
+  champ.forEach((nome_champ) => {
+    const variavel = document.querySelector(`#${nome_champ.id}`);
+    variavel.classList.add("sumir");
+  });
+  champ_permitidos.forEach((nome) => {
+    if (nome.toLowerCase().includes(escreva.value.toLowerCase())) {
+      champ.forEach((champ_nome) => {
+        if (champ_nome.id == nome) {
+          const elemento = document.querySelector(`#${champ_nome.id}`);
+          elemento.classList.remove("sumir");
         }
-      }
+      });
+    }
+  });
+  if (
+    !champ_permitidos.find((nome) =>
+      nome.toLowerCase().includes(escreva.value.toLowerCase())
+    )
+  ) {
+    champ.forEach((champ_nome) => {
+      const elemento = document.querySelector(`#${champ_nome.id}`);
+      elemento.classList.remove("sumir");
     });
-   }
-   else{
-    
-    champ.forEach((champ_nome_procura) => {
-     
-        const elemento = document.querySelector(`#${champ_nome_procura.id}`)
-        elemento.classList.remove("sumir")
-    
-      
-    });
-       alert("Campeão não encontrado")
-       escreva.value = ""
-       
-   }
-   
+    alert("Campeão não encontrado");
+  }
 }
-
-
 
 champ_permitidos.forEach((nome) => {
   let nome_corrigido = nome;
@@ -97,12 +89,11 @@ champ_permitidos.forEach((nome) => {
     nome_corrigido = "Renata_Glasc";
   } else if (nome == "Velkoz") {
     nome_corrigido = "Vel'Koz";
-  }else if(nome == "Bard"){
-    nome_corrigido = "Bardo"
-}
+  } else if (nome == "Bard") {
+    nome_corrigido = "Bardo";
+  }
   //o + para ir add
-  corpo.innerHTML += 
-  `<div class="Max_Tam" id="${nome}">
+  corpo.innerHTML += `<div class="Max_Tam" id="${nome}">
   <div class="champ" id="${nome}">
     <button class="botao_troca" id="volta" onclick = "voltar()"> <p> < </p></button>
     <div class="skin">
@@ -157,11 +148,10 @@ async function avancar() {
       }
       champ_antigo = nome_id;
       elemento_fora_antigo = elemento_fora;
-      
+
       elemento_nome_antigo = elemento_nome_fora;
-      
+
       nome_antigo = nome.name;
-      
 
       if (nome.skins[i]) {
         x = nome.skins[i].num;
@@ -191,7 +181,6 @@ async function voltar() {
         let contator = 0;
         for (let z = 0; nome.skins[z]; z++) {
           contator++;
-          
         }
         i = contator - 1;
       } else {
@@ -203,7 +192,6 @@ async function voltar() {
       elemento_nome_antigo = elemento_nome_fora;
 
       nome_antigo = nome.name;
-      
 
       if (nome.skins[i]) {
         x = nome.skins[i].num;
@@ -217,7 +205,6 @@ async function voltar() {
         let contator = 0;
         for (let z = 0; nome.skins[z]; z++) {
           contator++;
-          
         }
         i = contator - 1;
         x = nome.skins[i].num;
