@@ -132,6 +132,7 @@
     max-width: 0;
     overflow: hidden;
     font-size: 0.99em;
+    
    display: flex;
    align-items: center;
    justify-content: center;
@@ -167,6 +168,7 @@
 a{
     text-decoration: none;
     color: black;
+    text-align: center;
 }
 
 .sumir{

@@ -51,9 +51,9 @@ form.addEventListener("submit", ler);
 champ_permitidos.forEach((nome) => {
   let nome_corrigido = nome;
   if (nome == "TahmKench") {
-    nome_corrigido = "Tahm_Kench";
+    nome_corrigido = "Kench";
   } else if (nome == "Renata") {
-    nome_corrigido = "Renata_Glasc";
+    nome_corrigido = "Renata";
   } else if (nome == "Velkoz") {
     nome_corrigido = "Vel'Koz";
   } else if (nome == "Bard") {
