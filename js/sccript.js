@@ -5,9 +5,18 @@ const botao_confirmar = document.querySelector("#confirmar")
 form.addEventListener("submit",confirmar)
 botao_confirmar.addEventListener("click",confirmar)
 
+function confirmar(event){
+    event.preventDefault();
+    if(nick.value.length > 30){
+        alert("Muitos Caracteres")
+        nick.value = ""
+    }
+    else{
+        confirmar_final(event)
+    }
+}
 
-
-function confirmar(event) {
+function confirmar_final(event) {
     event.preventDefault()
     
     if(nick.value){
