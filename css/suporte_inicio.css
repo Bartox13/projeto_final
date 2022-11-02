@@ -4,6 +4,10 @@
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
+body{
+    height: 100vh;
+}
+
 #max{
     width: 90%;
     max-width: 1150px;
@@ -13,6 +17,7 @@
     align-items: center;
     flex-direction: column;
     gap: 25px;
+    
 }
 
 #topo{
@@ -69,7 +74,7 @@
     background-image: url(http://trumpwallpapers.com/wp-content/uploads/League-Of-Legends-Wallpaper-16-3840-x-2160.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    
+    min-height: 100%;
 
 }
 
